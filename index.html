@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="image/favicon.png">
+    <title>HotelCirebon</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 500px;
+        }
+
+     
+
+        .column{
+            width: 25%;
+            padding: 4px;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media (max-width: 800px) {
+            .column {
+                width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="image/logo.png" alt="Hotel" width="200px" height="50px"></a>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navb" style="">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#ModalMasuk">
+                                        <i class="fa fa-user"></i> Masuk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#ModalDaftar">Daftar</a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </nav>
+
+    <!-- The Modal Daftar -->
+    <div class="modal fade" id="ModalDaftar">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <!-- Modal Header -->
+               
+                    <!-- Modal body -->
+                <div class="modal-body">
+                    <center>
+                        <h3 class="font-weight-bold">Daftar Akun Anda</h3>
+                        <p>Buat akun agar lebih mudah menggunakan layanan Booking.com.</p>
+                    </center>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"><br>
+                            <button type="submit" class="btn btn-primary">Daftar</button>
+                
+                        </div>
+                        <hr>
+                        <p>Masuk dengan ?</p>
+                        <div class="d-flex">  
+                               <a href=""> <div class="p-2 mr-2 border">
+                                    <img src="image/facebook.png" alt="facebook" style="width: 40px; height: 28px">
+                                    <span style="font-size: 12px">Facebook</span> 
+                               </div></a>
+                               <a href=""> <div class="p-2 border pr-3">
+                                    <img src="image/google.png" alt="google" style="width: 40px; height: 28px">
+                                    <span style="font-size: 12px">Google</span> 
+                               </div></a> 
+                        </div>
+                        <p class="font-weight-bold" style="font-size: 14px">Sudah Punya Akun ?</p>
+                        <a href="" class="font-weight-bold" style="font-size: 14px">Masuk</a>
+                   
+                </div>
+                <!-- Modal footer -->
+        
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal Masuk -->
+    <div class="modal fade" id="ModalMasuk">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <!-- Modal Header -->
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h3 class="font-weight-bold">Masuk</h3>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+                    </div>
+                    <a href="" class="font-weight-bold" style="font-size: 14px">Lupa Password</a><br>
+                    <button type="submit" class="btn btn-primary">Masuk</button>
+                    <p>Belum punya akun?  <a href="" class="font-weight-bold" style="font-size: 14px">Daftar</a></p>
+                    <hr>
+                    <p>Masuk dengan ?</p>
+                    <div class="d-flex">  
+                        <a href=""> <div class="p-2 mr-2 border">
+                        <img src="image/facebook.png" alt="facebook" style="width: 40px; height: 28px">
+                        <span style="font-size: 12px">Facebook</span> 
+                    </div></a>
+                        <a href=""> <div class="p-2 border pr-3">
+                        <img src="image/google.png" alt="google" style="width: 40px; height: 28px">
+                        <span style="font-size: 12px">Google</span> 
+                    </div></a> 
+                </div>
+                </div>
+                <!-- Modal footer -->
+            </div>
+        </div>
+    </div>
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image/swiss.jpg" alt="Los Angeles">
+            <div class="carousel-caption">
+                <h3>Swiss-Belhotel Cirebon</h3>
+                <p>Peristirahatan mewah menanti Anda di Swiss-Belhotel Cirebon</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/aston.jpg" alt="Chicago">
+            <div class="carousel-caption">
+                <h3>Aston Cirebon Hotel and Convention Center</h3>
+                <p>Aston Cirebon Hotel and Convention Center adalah hotel bintang-4 dengan kolam renang outdoor.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/grage.jpg" alt="New York">
+            <div class="carousel-caption">
+                <h3>Grage Hotel Cirebon</h3>
+                <p>Grage Hotel Cirebon menawarkan akomodasi yang modern serta nyaman dengan kolam renang indoor dan outdoor.</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <div class="container">
+        <br><br>
+        <h1>Hotel di Cirebon</h1>      
+        <p>Cari hotel dan lainnya di Cirebon</p>
+        <div class="input-group mb-3 input-group-lg">
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="submit">Cari</button> 
+            </div>
+        </div>
+        <br>
+
+        <div class="row">  
+            <div class="column">
+                <img class="rouded" src="image/bimaroyale.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="bimaroyale.html" class="text-body"><h4>Bima Royale</h4></a>
+                    <p style="font-size: 14px;">Bima Royale di Cirebon, 10 km dari Perairan Cirebon dan 2,6 km dari Gua Sunyaragi, menawarkan...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;240.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">9.8 Istimewa<span class="font-weight-normal text-secondary"> - 8 Ulasan</span></p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="rouded" src="image/ibis.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="ibis.html" class="text-body"><h4>Ibis Budget Cirebon</h4></a>
+                    <p style="font-size: 14px;">Menawarkan tempat fitness, ibis budget Cirebon terletak di wilayah Cirebon, Jawa Barat, 2,3 km dari...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;287.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.3 Sangat Baik<span class="font-weight-normal text-secondary"> - 466 Ulasan</span></p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="rouded" src="image/luxton.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="the-luxton-cirebon.html" class="text-body"><h4>The Luxton Cirebon Hotel and Convention</h4></a>
+                    <p style="font-size: 14px;">The Luxton Cirebon Hotel and Convention menawarkan pusat spa, sauna...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;780.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.4 Sangat Baik<span class="font-weight-normal text-secondary"> - 256 Ulasan</span></p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="rouded" src="image/neo.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="neo.html" class="text-body"><h4>Hotel NEO Cirebon</h4></a>
+                    <p style="font-size: 14px;">Hotel NEO Cirebon terletak di wilayah Cirebon, Jawa Barat, dan berjarak 2,6 km dari Cirebon Waterland...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;300.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.0 Sangat Baik<span class="font-weight-normal text-secondary"> - 278 Ulasan</span></p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="rouded" src="image/batiqa.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="batiqa.html" class="text-body"><h4>Batiqa Hotel Cirebon</h4></a>
+                    <p style="font-size: 14px;">Terletak di Cirebon, 5 menit berkendara dari CSB Mall, Batiqa Hotel Cirebon menawarkan akomodasi modern...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;665.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.2 Sangat Baik<span class="font-weight-normal text-secondary"> - 187 Ulasan</span></p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="rouded" src="image/swiss.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="swiss.html" class="text-body"><h4>Swiss-Belhotel Cirebon</h4></a>
+                    <p style="font-size: 14px;">Peristirahatan mewah menanti Anda di Swiss-Belhotel Cirebon, yang berjarak...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;240.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.0 Sangat Baik<span class="font-weight-normal text-secondary"> - 160 Ulasan</span></p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="rouded" src="image/aston.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="aston.html" class="text-body"><h4>Aston Cirebon Hotel and Convention Center</h4></a>
+                    <p style="font-size: 14px;">Aston Cirebon Hotel and Convention Center adalah hotel bintang-4...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;706.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.3 Sangat Baik<span class="font-weight-normal text-secondary"> - 258 Ulasan</span></p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="rouded" src="image/grage.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="grage.html" class="text-body"><h4>Grage Hotel Cirebon</h4></a>
+                    <p style="font-size: 14px;">Salah satu pilihan utama kami di Cirebon.
+                                Hanya berjarak 10 meter dari Grage Mall Cirebon...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;800.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.3 Sangat Baik<span class="font-weight-normal text-secondary"> - 73 Ulasan</span></p>
+                </div>
+            </div>
+        </div>
+
+        <ul class="pagination justify-content-center mt-5">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+
+        <h3>Hotel Terlaris</h3>
+        <div class="d-flex flex-row mb-3">  
+            <div class="mr-3 border" style="width: 25%;">
+                <img class="rouded" src="image/ibis.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="ibis.html" class="text-body"><h4>Ibis Budget Cirebon</h4></a>
+                    <p style="font-size: 14px;">Menawarkan tempat fitness, ibis budget Cirebon terletak di wilayah Cirebon, Jawa Barat, 2,3 km dari...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;287.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.3 Sangat Baik<span class="font-weight-normal text-secondary"> - 466 Ulasan</span></p>
+                </div>
+            </div>
+            <div class="mr-3 border" style="width: 25%;">
+                <img class="rouded" src="image/neo.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="neo.html" class="text-body"><h4>Hotel NEO Cirebon</h4></a>
+                    <p style="font-size: 14px;">Hotel NEO Cirebon terletak di wilayah Cirebon, Jawa Barat, dan berjarak 2,6 km dari Cirebon Waterland...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;300.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.0 Sangat Baik<span class="font-weight-normal text-secondary"> - 278 Ulasan</span></p>
+                </div>
+            </div>
+            <div class="mr-3 border" style="width: 25%; word-wrap: break-word;">
+                <img class="rouded" src="image/aston.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="aston.html" class="text-body"><h4>Aston Cirebon Hotel and Convention Center</h4></a>
+                    <p style="font-size: 14px;">Aston Cirebon Hotel and Convention Center adalah hotel bintang-4...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;706.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.3 Sangat Baik<span class="font-weight-normal text-secondary"> - 258 Ulasan</span></p>
+                </div>
+            </div>
+            <div class="border" style="width: 25%;">
+                <img class="rouded" src="image/luxton.jpg" alt="hotel" style="height: 250px; width: 100%;">
+                <div class="p-2">
+                    <a href="the-luxton-cirebon.html" class="text-body"><h4>The Luxton Cirebon Hotel and Convention</h4></a>
+                    <p style="font-size: 14px;">The Luxton Cirebon Hotel and Convention menawarkan pusat spa, sauna...</p>
+                    <p class="font-weight-bold" style="font-size: 14px;">Harga rata-rata/malam: Rp&nbsp;780.000</p>
+                    <p class="font-weight-bold text-info" style="font-size: 14px;">8.4 Sangat Baik<span class="font-weight-normal text-secondary"> - 256 Ulasan</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 bg-dark text-white" style="padding: 50px 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Hotel</h2>
+                        <p>Hubungi Kami</p>
+                        <h3>(0231) 23456</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Tentang Hotel</h4>
+                        <ul type="none">
+                            <li><a href="contact.html" class="text-white">Hubungi Kami</a></li>
+                            <li><a href="help.html" class="text-white">Pusat Bantuan</a></li>
+                            <li><a href="howto.html" class="text-white">Cara Pesan</a></li>
+                            <li><a href="about.html" class="text-white">Tentang Kami</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Follow Kami di</h4>
+                        <ul type="none">
+                            <li><a href="https://www.twitter.com" class="text-white"><i class="fab fa-twitter"></i>&nbsp;Twitter</a></li>
+                            <li><a href="https://www.facebook.com" class="text-white"><i class="fab fa-facebook-f"></i>&nbsp;Facebook</a></li>
+                            <li><a href="https://www.instagram.com" class="text-white"><i class="fab fa-instagram"></i>&nbsp;Instagram</a></li>
+                            <li><a href="https://www.youtube.com/" class="text-white"><i class="fab fa-youtube"></i>&nbsp;Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
